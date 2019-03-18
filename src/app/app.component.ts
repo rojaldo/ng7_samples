@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'samples';
+  title: string = 'hola';
+  myNumber: number = 9;
+
+  handleMyClick(event) {
+    console.log('pasa por aquí');
+    this.title = event.target.id;
+  }
 }
