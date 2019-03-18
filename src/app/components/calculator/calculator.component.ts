@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
+  display = '';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleFigure(num) {
+    this.display = this.display + num;
+  }
+
+  handleSymbol(symbol) {
+    this.display = this.display + symbol;
   }
 
 }
