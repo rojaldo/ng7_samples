@@ -1,29 +1,4 @@
-<h1>{{display}}</h1>
-<table>
-  <tbody>
-    <tr>
-      <td><button (click)="handleFigure(7)">7</button></td>
-      <td><button (click)="handleFigure(8)">8</button></td>
-      <td><button (click)="handleFigure(9)">9</button></td>
-      <td><button (click)="handleSymbol('/')">/</button></td>
-    </tr>
-    <tr>
-      <td><button (click)="handleFigure(4)">4</button></td>
-      <td><button (click)="handleFigure(5)">5</button></td>
-      <td><button (click)="handleFigure(6)">6</button></td>
-      <td><button (click)="handleSymbol('*')">*</button></td>
-    </tr>
-    <tr>
-      <td><button (click)="handleFigure(1)">1</button></td>
-      <td><button (click)="handleFigure(2)">2</button></td>
-      <td><button (click)="handleFigure(3)">3</button></td>
-      <td><button (click)="handleSymbol('-')">-</button></td>
-    </tr>
-    <tr>
-      <td><button (click)="handleSymbol('.')">.</button></td>
-      <td><button (click)="handleFigure(0)">0</button></td>
-      <td><button (click)="handleSymbol('=')">=</button></td>
-      <td><button (click)="handleSymbol('+')">+</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <app-display [myDisplay]="display" ></app-display>
+  <app-buttons (signal)="handleSignal($event)"></app-buttons>
+</div>
