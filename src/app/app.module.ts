@@ -8,16 +8,19 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DisplayComponent } from './components/display/display.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { ProcessorService } from './services/processor.service';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
     DisplayComponent,
-    ButtonsComponent  ],
+    ButtonsComponent,
+    HeroesComponent  ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule, FormsModule
   ],
   providers: [ProcessorService],
   bootstrap: [AppComponent]

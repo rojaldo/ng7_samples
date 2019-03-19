@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form-group">
+    <label for="">Hero name</label>
+    <input [(ngModel)]="newHero" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+    <small id="helpId" class="form-text text-muted">You should put a hero name here</small>
+  </div>
+  <button type="button" class="btn btn-primary m-2" (click)="addHero()">Add hero</button>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let hero of heroes">{{hero}}</li>
+      </ul>
+      
+</div>
