@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from 'src/app/services/heroes.service';
+import { Hero } from 'src/app/model/hero';
 
 @Component({
   selector: 'app-heroes',
@@ -13,7 +14,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
   }
 
-  addHero(newHero) {
+  addHero(newHero: Hero) {
     this.service.heroes.push(newHero);
   }
 

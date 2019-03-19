@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Hero } from 'src/app/model/hero';
 
 @Component({
   selector: 'app-form',
@@ -7,16 +8,18 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  @Output() signalNewHero = new EventEmitter<string>();
-  newHero = '';
+  @Output() signalNewHero = new EventEmitter<Hero>();
+  newHeroName = '';
+  newHeroDescription = '';
   constructor() { }
 
   ngOnInit() {
   }
 
   addHero() {
-    this.signalNewHero.emit(this.newHero);
-    this.newHero = '';
+    this.signalNewHero.emit(new Hero(this.newHeroName, this.newHeroDescription));
+    this.newHeroName = '';
+    this.newHeroDescription = '';
   }
 
 }

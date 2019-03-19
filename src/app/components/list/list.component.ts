@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Hero } from 'src/app/model/hero';
 
 @Component({
   selector: 'app-list',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  @Input() content: string[];
+  @Input() content: Hero[];
   constructor() { }
 
   ngOnInit() {

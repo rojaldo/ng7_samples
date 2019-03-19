@@ -1,6 +1,9 @@
 <div class="form-group">
   <label for="">Hero name</label>
-  <input [(ngModel)]="newHero" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+  <input [(ngModel)]="newHeroName" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
   <small id="helpId" class="form-text text-muted">You should put a hero name here</small>
+  <label for="">Hero description</label>
+  <input [(ngModel)]="newHeroDescription" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+  <small id="helpId" class="form-text text-muted">You should put a hero description here</small>
   <button type="button" class="btn btn-primary" (click)="addHero()">Add hero</button>
 </div>
