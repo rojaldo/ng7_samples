@@ -11,13 +11,14 @@ export class FormComponent implements OnInit {
   @Output() signalNewHero = new EventEmitter<Hero>();
   newHeroName = '';
   newHeroDescription = '';
+  currentRate = 5;
   constructor() { }
 
   ngOnInit() {
   }
 
   addHero() {
-    this.signalNewHero.emit(new Hero(this.newHeroName, this.newHeroDescription));
+    this.signalNewHero.emit(new Hero(this.newHeroName, this.newHeroDescription, this.currentRate));
     this.newHeroName = '';
     this.newHeroDescription = '';
   }

@@ -2,5 +2,6 @@
   <li class="list-group-item" *ngFor="let hero of content">
     <h3>{{hero.name}}</h3>
     <p>{{hero.description}}</p>
+    <ngb-rating [rate]="hero.rating"></ngb-rating>
   </li>
 </ul>
