@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProcessorService } from 'src/app/services/processor.service';
 
 @Component({
   selector: 'app-display',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
   @Input() myDisplay: string;
-  constructor() { }
+  constructor(public service: ProcessorService) { }
 
   ngOnInit() {
   }

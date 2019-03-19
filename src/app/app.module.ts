@@ -7,6 +7,7 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DisplayComponent } from './components/display/display.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { ProcessorService } from './services/processor.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
     BrowserModule,
     NgbModule
   ],
-  providers: [],
+  providers: [ProcessorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProcessorService } from 'src/app/services/processor.service';
 
 @Component({
   selector: 'app-calculator',
@@ -7,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
-  display = '';
-
-  constructor() { }
+  constructor(public service: ProcessorService) { }
 
   ngOnInit() {
   }
 
   handleSignal(buttonsDisplay) {
-    this.display = buttonsDisplay;
+    this.service.display = buttonsDisplay;
   }
 
 }
