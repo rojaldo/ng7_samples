@@ -6,7 +6,7 @@
   </div>
   <button type="button" class="btn btn-primary m-2" (click)="addHero()">Add hero</button>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let hero of heroes">{{hero}}</li>
+        <li class="list-group-item" *ngFor="let hero of service.heroes">{{hero}}</li>
       </ul>
       
 </div>

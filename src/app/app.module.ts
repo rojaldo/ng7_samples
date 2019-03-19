@@ -10,6 +10,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { ProcessorService } from './services/processor.service';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
+import { HeroesService } from './services/heroes.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     NgbModule, FormsModule
   ],
-  providers: [ProcessorService],
+  providers: [ProcessorService, HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
