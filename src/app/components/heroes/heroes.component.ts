@@ -8,15 +8,13 @@ import { HeroesService } from 'src/app/services/heroes.service';
 })
 export class HeroesComponent implements OnInit {
 
-  newHero = '';
   constructor(public service: HeroesService) { }
 
   ngOnInit() {
   }
 
-  addHero() {
-    this.service.heroes.push(this.newHero);
-    this.newHero = '';
+  addHero(newHero) {
+    this.service.heroes.push(newHero);
   }
 
 }

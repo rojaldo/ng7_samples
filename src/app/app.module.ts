@@ -11,6 +11,8 @@ import { ProcessorService } from './services/processor.service';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroesService } from './services/heroes.service';
+import { ListComponent } from './components/list/list.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HeroesService } from './services/heroes.service';
     CalculatorComponent,
     DisplayComponent,
     ButtonsComponent,
-    HeroesComponent  ],
+    HeroesComponent,
+    ListComponent,
+    FormComponent  ],
   imports: [
     BrowserModule,
     NgbModule, FormsModule
