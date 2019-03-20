@@ -27,7 +27,7 @@ export class ApodComponent implements OnInit {
 
   getApiInfo() {
 // tslint:disable-next-line: max-line-length
-    this.service.getRequest('https://api.nasa.gov/planetary/apod?api_key=tqz634Z1x0LiJzjbhSyUoExrZaGKLM0MG1VnROR6').subscribe(
+    this.service.getRequest('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY').subscribe(
       data => this.processResult(data),
       error => this.processError(error),
       () => this.processFinal()
