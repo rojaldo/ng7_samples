@@ -12,15 +12,32 @@ export class FormComponent implements OnInit {
   newHeroName = '';
   newHeroDescription = '';
   currentRate = 5;
+  showButton = false;
+  classButton = 'btn btn-secondary';
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  addHero() {
-    this.signalNewHero.emit(new Hero(this.newHeroName, this.newHeroDescription, this.currentRate));
-    this.newHeroName = '';
-    this.newHeroDescription = '';
+  isEmpty(value: string) {
+    this.showButton =  (value !== '');
+    if (this.showButton) {
+      this.classButton = 'btn btn-primary';
+    } else {
+      this.classButton = 'btn btn-secondary';
+    }
+  }
+
+  addHero(name: any, description: any) {
+    this.signalNewHero.emit(new Hero(name.value, description.value, this.currentRate));
+    description.value = '';
+    name.value = '';
+    this.showButton = false;
+  }
+
+  isNameNotEmpty(): boolean {
+    return this.newHeroName !== '';
   }
 
 }

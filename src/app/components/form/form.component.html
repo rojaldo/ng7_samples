@@ -1,11 +1,11 @@
 <div class="form-group">
   <label for="">Hero name</label>
-  <input [(ngModel)]="newHeroName" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+  <input #nameInput [(ngModel)]="newHeroName" (keyup)="isEmpty(nameInput.value)" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" required>
   <small id="helpId" class="form-text text-muted">You should put a hero name here</small>
   <label for="">Hero description</label>
-  <input [(ngModel)]="newHeroDescription" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+  <input #descriptionInput type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
   <small id="helpId" class="form-text text-muted">You should put a hero description here</small>
    <h2><ngb-rating [(rate)]="currentRate"></ngb-rating></h2> 
   <br>
-  <button type="button" class="btn btn-primary" (click)="addHero()">Add hero</button>
+  <button [disabled]="!showButton" type="button" [class]="classButton" (click)="addHero(nameInput, descriptionInput)">Add hero</button>
 </div>
