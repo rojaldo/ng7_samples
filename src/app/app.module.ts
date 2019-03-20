@@ -16,6 +16,7 @@ import { FormComponent } from './components/form/form.component';
 import { BeersComponent } from './components/beers/beers.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RequestService } from './services/request.service';
+import { AlcoholPipe } from './pipes/alcohol.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { RequestService } from './services/request.service';
     HeroesComponent,
     ListComponent,
     FormComponent,
-    BeersComponent  ],
+    BeersComponent,
+    AlcoholPipe  ],
   imports: [
     BrowserModule,
     NgbModule, FormsModule, HttpClientModule
