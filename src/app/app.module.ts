@@ -19,7 +19,6 @@ import { RequestService } from './services/request.service';
 import { AlcoholPipe } from './pipes/alcohol.pipe';
 import { Ng5SliderModule } from 'ng5-slider';
 import { ApodComponent } from './components/apod/apod.component';
-import { YoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,7 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
     ApodComponent  ],
   imports: [
     BrowserModule,
-    NgbModule, FormsModule, HttpClientModule, Ng5SliderModule, YoutubePlayerModule
+    NgbModule, FormsModule, HttpClientModule, Ng5SliderModule
   ],
   providers: [ProcessorService, HeroesService, RequestService],
   bootstrap: [AppComponent]
