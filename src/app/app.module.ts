@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RequestService } from './services/request.service';
 import { AlcoholPipe } from './pipes/alcohol.pipe';
 import { Ng5SliderModule } from 'ng5-slider';
+import { ApodComponent } from './components/apod/apod.component';
+import { YoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
@@ -29,10 +31,11 @@ import { Ng5SliderModule } from 'ng5-slider';
     ListComponent,
     FormComponent,
     BeersComponent,
-    AlcoholPipe  ],
+    AlcoholPipe,
+    ApodComponent  ],
   imports: [
     BrowserModule,
-    NgbModule, FormsModule, HttpClientModule, Ng5SliderModule
+    NgbModule, FormsModule, HttpClientModule, Ng5SliderModule, YoutubePlayerModule
   ],
   providers: [ProcessorService, HeroesService, RequestService],
   bootstrap: [AppComponent]

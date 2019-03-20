@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">{{result.title}}</h1>
+    <p class="lead">{{result.date}}</p>
+    <hr class="my-2">
+    <p>{{result.explanation}}</p>
+    <p class="lead">
+    </p>
+    <div class="d-flex justify-content-center">
+      <iframe [src]="safeSrc" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<p>
+  {{result | json}}
+</p>
