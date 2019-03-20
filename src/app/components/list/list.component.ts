@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from 'src/app/model/hero';
 
 @Component({
@@ -9,9 +9,15 @@ import { Hero } from 'src/app/model/hero';
 export class ListComponent implements OnInit {
 
   @Input() content: Hero[];
+  @Output() deleteHero = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  removeItem(index: number) {
+    console.log('remove: ' + index);
+    this.deleteHero.emit(index);
   }
 
 }

@@ -1,4 +1,4 @@
 <div class="container">
 <app-form (signalNewHero)="addHero($event)"></app-form>
-  <app-list [content]="service.heroes"></app-list>
+  <app-list [content]="service.heroes" (deleteHero)="deleteHero($event)"></app-list>
 </div>

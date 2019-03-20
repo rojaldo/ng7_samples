@@ -18,4 +18,8 @@ export class HeroesComponent implements OnInit {
     this.service.heroes.push(newHero);
   }
 
+  deleteHero(index: number) {
+    this.service.heroes.splice(index, 1);
+  }
+
 }

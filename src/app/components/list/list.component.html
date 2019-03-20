@@ -1,7 +1,17 @@
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let hero of content">
-    <h3>{{hero.name}}</h3>
-    <p>{{hero.description}}</p>
-    <ngb-rating [rate]="hero.rating"></ngb-rating>
+  <li class="list-group-item" *ngFor="let hero of content;let i = index">
+
+    <div class="row">
+      <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+
+        <h3>{{hero.name}}</h3>
+        <p>{{hero.description}}</p>
+        <ngb-rating [rate]="hero.rating"></ngb-rating>
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        <button type="button" class="btn btn-danger" (click)="removeItem(i)">Remove</button>
+      </div>
+    </div>
+
   </li>
 </ul>
