@@ -19,6 +19,7 @@ import { RequestService } from './services/request.service';
 import { AlcoholPipe } from './pipes/alcohol.pipe';
 import { Ng5SliderModule } from 'ng5-slider';
 import { ApodComponent } from './components/apod/apod.component';
+import { ShowapodComponent } from './components/showapod/showapod.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ApodComponent } from './components/apod/apod.component';
     FormComponent,
     BeersComponent,
     AlcoholPipe,
-    ApodComponent  ],
+    ApodComponent,
+    ShowapodComponent  ],
   imports: [
     BrowserModule,
     NgbModule, FormsModule, HttpClientModule, Ng5SliderModule
