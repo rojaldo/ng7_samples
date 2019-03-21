@@ -47,23 +47,10 @@ export class ButtonsComponent implements OnInit {
       }
     } else if (this.service.currentState === States.SecondFigure) {
       if (symbol === '=') {
-        this.service.result = this.resolve();
+        this.service.result = this.service.resolve();
         this.service.currentState = States.Result;
         this.updateDisplay(symbol + this.service.result);
       }
-    }
-  }
-
-  resolve(): number {
-    switch (this.service.operator) {
-      case '+':
-        return this.service.firstFigure + this.service.secondFigure;
-        case '-':
-        return this.service.firstFigure - this.service.secondFigure;
-        case '*':
-        return this.service.firstFigure * this.service.secondFigure;
-        case '/':
-        return this.service.firstFigure / this.service.secondFigure;
     }
   }
 

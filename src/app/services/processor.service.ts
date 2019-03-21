@@ -14,4 +14,17 @@ export class ProcessorService {
   operator = '';
 
   constructor() { }
+
+  resolve(): number {
+    switch (this.operator) {
+      case '+':
+        return this.firstFigure + this.secondFigure;
+        case '-':
+        return this.firstFigure - this.secondFigure;
+        case '*':
+        return this.firstFigure * this.secondFigure;
+        case '/':
+        return this.firstFigure / this.secondFigure;
+    }
+  }
 }

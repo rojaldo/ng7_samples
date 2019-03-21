@@ -13,6 +13,7 @@ export class ShowapodComponent implements OnInit, OnChanges {
   result: any;
   safeSrc: SafeResourceUrl;
   resolved = false;
+  errorKey = false;
 
   constructor(public service: RequestService, private sanitizer: DomSanitizer) { }
 
@@ -45,6 +46,7 @@ export class ShowapodComponent implements OnInit, OnChanges {
   }
 
   processError(error: any) {
+    this.errorKey = true;
   }
 
   processFinal() { }
